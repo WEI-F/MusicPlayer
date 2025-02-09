@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QMediaPlayer>
+#include <QListWidget>
+#include <musicplaylist.h>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -25,8 +27,10 @@ private slots:
     void updateDuration(qint64);        //设置进度条区间值
     void setVolume(int);                //设置音量
 
+
 private:
     QMediaPlayer *player;
+    MusicPlaylist *playlistManager;
     QAudioOutput *audioOutput;
     Ui::MainWindow *ui;
 };
